@@ -1,35 +1,35 @@
-site_name: NH Switch Guide
+site_name: 스위치 가이드
 theme: slate
-copyright: Copyright &copy; 2021 <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>, Maintained by the <a href="/switch-guide/about">NH Discord Server</a>.
-site_description: Switch CFW Guide.
-site_author: NH Discord Server.
+copyright: Copyright &copy; 2021 <a href="https://discord.gg/C29hYvh" target="_blank">Nintendo Homebrew</a>
+site_description: 스위치 커스텀 펌웨어 가이드.
+site_author: NH Discord Server, hacks-korean.
 
 nav:
-    - Home: index.md
-    - User Guide:
-        - 'Getting Started': 'user_guide/getting_started.md'
+    - 홈: index.md
+    - 가이드:
+        - '시작하기': 'user_guide/getting_started.md'
         - 'RCM': 'user_guide/rcm.md'  
-        - 'Entering RCM': 'user_guide/emummc/entering_rcm.md'
-        - 'Sending a payload': 'user_guide/emummc/sending_payload.md'      
-        - 'Partitioning the SD': 'user_guide/emummc/partitioning_sd.md'    
-        - 'SD preparations': 'user_guide/emummc/sd_preparation.md'
-        - 'Making the emuMMC': 'user_guide/emummc/making_emummc.md'
-        - 'Launching CFW': 'user_guide/emummc/launching_cfw.md'
-    - Extras:
-        - 'Blocking Updates': 'extras/blocking_updates.md'
-        - 'Restoring a NAND Backup': 'extras/nandrestore.md'
+        - 'RCM 진입': 'user_guide/emummc/entering_rcm.md'
+        - '페이로드 주입': 'user_guide/emummc/sending_payload.md'      
+        - 'SD 파티션 나누기': 'user_guide/emummc/partitioning_sd.md'    
+        - 'SD 준비': 'user_guide/emummc/sd_preparation.md'
+        - 'emuMMC(에뮤낸드) 만들기': 'user_guide/emummc/making_emummc.md'
+        - '커스텀 펌웨어 실행': 'user_guide/emummc/launching_cfw.md'
+    - 추가:
+        - '닌텐도 서버 차단': 'extras/blocking_updates.md'
+        - '낸드 백업 복원': 'extras/nandrestore.md'
         - 'AutoRCM': 'extras/autorcm.md'
-        - 'Dumping Title Keys': 'extras/dumping_title_keys.md'
-        - 'Theming': 'extras/theming.md'
-        - 'Save Management': 'extras/save_management.md'
-        - 'Game Modding': 'extras/game_modding.md'       
-        - 'Linux injection without root': 'extras/adding_udev.md'
-        - 'Showing File Name Extensions (Windows)': 'extras/showing_file_extensions.md'
-        - 'Alternate Boot Setups': 'extras/alternate_bootsetups.md'
-        - 'RCM Payload Injectors Information': 'extras/rcm_injectors.md'
-        - 'Updating CFW': 'extras/updating.md'
-        - 'Changing SD cards': 'extras/transfer_sd.md'
-        - 'Glossary': 'extras/glossary.md'
+        - '타이틀키 덤프': 'extras/dumping_title_keys.md'
+        - '테마': 'extras/theming.md'
+        - '세이브 관리': 'extras/save_management.md'
+        - '게임 모딩': 'extras/game_modding.md'       
+        - 'root 없이 Linux에서 페이로드 주입': 'extras/adding_udev.md'
+        - '파일 확장자 표시 (Windows)': 'extras/showing_file_extensions.md'
+        - '다른 부팅 방법': 'extras/alternate_bootsetups.md'
+        - 'RCM 페이로드 인젝터 정보': 'extras/rcm_injectors.md'
+        - '커스텀 펌웨어 업데이트': 'extras/updating.md'
+        - 'SD 카드 바꾸기': 'extras/transfer_sd.md'
+        - '기타': 'extras/glossary.md'
     - FAQ: faq.md
     - About: about.md
     
