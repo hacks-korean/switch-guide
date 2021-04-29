@@ -1,4 +1,4 @@
-# NH Switch Guide
+# 스위치 해킹 가이드
 
 순정에서 Atmosphere까지, 스위치 커스텀 펌웨어 가이드
 
@@ -17,58 +17,58 @@
 ### 커스텀 펌웨어(Custom Firmware)란 무엇인가요?
 
 !!! tip ""
-    Custom Firmware (“CFW”) is a piece software that modifies the system firmware.
-    Atmosphere, for example, does this by running in the background and patching the OS on the fly.
+    커스텀 펌웨어(CFW, 커펌)은 시스템 펌웨어를 수정하는 소프트웨어를 의미합니다.
+    예를 들어, Atmosphere는 백그라운드에서 실행되어 스위치 OS를 바로 패치합니다.
 
-    This allows one to extend the functionality of their system by giving homebrew higher levels of permission than most userland exploits and can be used to provide extra features for homebrew devs and users to take advantage of for various purposes, for instance, game modding using LayeredFS.
+    이는 홈브류에게 다른 유저랜드 취약점을 사용하는 것보다 높은 권한을 부여하여 LayeredFS를 사용하여 게임 모딩을 하는 등 많은 이점이 있습니다.
 
-    CFW can be set up on any first-generation console on any version (but will require additional tools).
+    커스텀 펌웨어는 모든 펌웨어의 초기 생산된 기기, 또는 모드칩(SX Core/Lite)가 설치된 기기에서 사용할 수 있습니다.
 
-### What does this guide install?
-
-!!! tip ""
-    This guide has the end goal of taking a completely unmodified Switch from Stock Firmware to Atmosphere Custom Firmware.
-
-    fusee-gelee is currently the best method of launching Custom Firmware that gives us nearly full control of the system. It utilizes a vulnerability in the bootROM of the first-generation Switch systems, allowing us to send any payload we want to the Switch's recovery mode, instead of only ones that Nintendo have authorized.
-
-### What can I do with Custom Firmware?
+### 이 가이드는 무엇을 설치하는 가이드인가요?
 
 !!! tip ""
-    * Customize your HOME Menu with user-created themes and splash screens
-    * Use “ROM hacks” for games that you own
-    * Backup, edit, and restore saves for many games
-    * Play games for older systems with various emulators, using RetroArch or other standalone emulators
-    * Safely update to the latest system version without fear of losing access to homebrew
+    이 가이드는 순정 펌웨어에서 Atmosphere 커스텀 펌웨어를 설치하는 방법을 다룹니다.
 
-### What do I need to know before starting?
+    fusee-gelee와 SX 모드칩을 사용하여 커스텀 펌웨어를 설치하는 방법을 주로 다룹니다.
+
+### 커스텀 펌웨어로 무엇을 할 수 있나요?
 
 !!! tip ""
-    Before beginning the guide, you must know the risks of Switch hacking: EVERY time you modify your system, there is always the potential for an UNRECOVERABLE brick. They’re rare but still a possibility so make sure you follow ALL directions EXACTLY.
+    * 홈메뉴를 원하는 디자인과 테마로 커스텀
+    * 보유한 게임에서 모드를 사용
+    * 게임 세이브 백업, 수정, 복원
+    * RetroArch와 여러 다른 에뮬레이터를 사용해 다른 시스템의 게임을 즐기기
+    * 홈브류 접근을 잃지 않고 최신 버전의 펌웨어로 업데이트
 
-    This guide will work on first-generation Switch consoles in all regions on firmware 12.0.1 or below.
+### 시작하기전에 알아야 할 것은 무엇이 있나요?
 
-    You will need one of the following in order to successfully follow this guide:
+!!! tip ""
+    이 가이드를 보고 시작하기 전에 알아야 할 주의 사항: 시스템을 수정하고 변경할 때는 항상 벽돌의 위험이 있으므로 모든 과정을 정확하게 따라하셔야 합니다. 
 
-    - A USB-A to USB-C cable, and a PC
-    - A USB-OTG cable, a USB-A to USB-C cable, and an Android device
-		- This does not work on every android phone
-    - A USB-C cable, and an Android device with a USB-C port
-    - A Lightning-OTG adapter, a USB-A to USB-C cable, and a jailbroken iOS device
-        - This method is not covered by the guide, but you can read more about it at [this website](https://mologie.github.io/nxboot/)
+    이 가이드는 초기 생산 또는 모드칩이 설치된 펌웨어 12.0.1 이하의 기기에 적용할 수 있습니다.
+
+    이 가이드를 진행하기 위해서는 다음 중 하나가 필요합니다. (초기 생산 기기):
+
+    - USB-A to USB-C cable과 PC
+    - USB-OTG 케이블, USB-A to USB-C 케이블, 안드로이드 기기
+		- 모든 안드로이드 기기에서 작동하지는 않습니다.
+    - USB-C 케이블, USB-C 포트가 있는 안드로이드 기기
+    - Lightning-OTG 어댑터, USB-A to USB-C 케이블, 탈옥된 iOS 기기
+        - 이 가이드에서는 다루지 않지만 다음 [웹사이트](https://mologie.github.io/nxboot/)에서 더 자세히 알아볼 수 있습니다.
 
 
-    You will also need a micro SD card that is at least 64 gigabytes or larger if you plan on following this guide through the emummc path, which is safer and strongly recommended. If you must use a smaller SD card, it is possible with the sysmmc path, but strongly not recommended.
+    또한 emuMMC(에뮤낸드)를 사용하기 위해서는 64GB 이상의 SD카드가 필요합니다. 더 작은 SD카드를 사용해도 sysMMC(시스낸드)는 사용할 수 있습니다.
 
-    Finally, you will need a way to access Recovery Mode. (This will be further explained in the "Entering RCM section")
+    마지막으로, 초기 생산 기기는 RCM에 진입하기 위한 방법이 필요합니다. ("RCM 진입"에서 더 자세히 다룰 것입니다.)
 
-If everything goes according to plan, you will lose no data and end up with everything that you started with (games, Nintendo Account, saves, etc will be preserved).
+만약 모두 절차대로 이 가이드를 따라한다면, 스위치의 데이터(게임, 닌텐도 어카운트, 게임 세이브 등)을 잃지 않을 것입니다.
 
-Keep your device plugged in and charged throughout the entire process to avoid data loss or damage from an unexpected power-off.
+절차를 진행하는 도중 전원이 꺼지는 일이 없도록 충분한 배터리를 유지하는것이 좋습니다.
 
-Custom Firmware is not permanent with current methods, and will be unloaded upon rebooting the system.
+하드웨어적 수정을 하지 않는 이상 커스텀 펌웨어는 영구적이지 않습니다.
 
-It is advised that you read the entire guide from start to finish one or more times before actually running through the guide with your system.
+가이드를 따라 시작하기 전에 전체 가이드를 한 번 이상 읽는 것을 권장합니다.
 
 &nbsp;
 
-#### [Continue to Getting Started <i class="fa fa-arrow-circle-right fa-lg"></i>](user_guide/getting_started.md) 
+#### [시작하기 <i class="fa fa-arrow-circle-right fa-lg"></i>](user_guide/getting_started.md) 
