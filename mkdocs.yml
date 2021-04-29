@@ -16,6 +16,7 @@ nav:
         - 'SD 준비': 'user_guide/emummc/sd_preparation.md'
         - 'emuMMC(에뮤낸드) 만들기': 'user_guide/emummc/making_emummc.md'
         - '커스텀 펌웨어 실행': 'user_guide/emummc/launching_cfw.md'
+        - '시그니처 패치': 'user_guide/sigpatches.md'
     - 추가 가이드:
         - '닌텐도 서버 차단': 'extras/blocking_updates.md'
         - '낸드 백업 복원': 'extras/nandrestore.md'
