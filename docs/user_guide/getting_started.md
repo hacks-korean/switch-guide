@@ -1,12 +1,12 @@
-# Getting Started
+# 시작하기
 
-### Finding your serial number
+### 시리얼 번호 확인하기
 
-The first thing to do is determine if your Switch is vulnerable to fusee-gelee, the exploit we will be using to launch CFW.
+가장 처음 해야 할 것은 스위치에서 fusee-gelee(RCM 버그)를 사용할 수 있는지 조사해야 합니다.
 
-This vulnerability was independently discovered by several different Switch hacking teams, and multiple variants of it were released to the public in April 2018 after a 90-day disclosure period ended. Nintendo and NVIDIA were made aware of the issue before the public release as a result, and Switch systems that are not vulnerable to the exploit started being spotted in the wild in July 2018. NVIDIA [publicly acknowledged the flaw](https://nvidia.custhelp.com/app/answers/detail/a_id/4660/~/security-notice%3A-nvidia-tegra-rcm-vulnerability) in April as well. In July 2019, Nintendo announced updated consoles, a handheld variant of the Switch called the Switch Lite (HDH-001), and a new model of original Switch (HAC-001-01) with better battery life. Both of these new models use a new processor called the T210b01 (also known as T214 and Mariko) with a new bootROM, and are not hackable at the current time.
+fusee-gelee는 여러 스위치 해킹팀에 의해 발견된 취약점이며 2018년 6월 이후에 생산된 기기에서는 패치되었습니다. 2019년 7월에 발표된 배터리 개선형과 스위치 라이트는 세로운 프로세서 T210b01(T214, Mariko)를 사용하며 fusee-gelee가 작동하지 않습니다.
 
-Patched and Mariko units can be identified by their serial number. This number can be found on the bottom of your Switch adjacent to the USB-C port, or in the Settings applet at **System -> Serial Information**. 
+패치된 기기과 Mariko 기기는 시리얼 번호를 통해 구분할 수 있으며, 시리얼 번호는 USB 포트 옆쪽 또는 스위치 시스템 설정에서 확인할 수 있습니다. 이러한 기기에서 커스텀 펌웨어를 사용하기 위해서는 모드칩(SX Core/Lite)가 필요합니다. 
 
 &nbsp;
 
@@ -18,24 +18,23 @@ Patched and Mariko units can be identified by their serial number. This number c
 
 &nbsp;
 
-### Determining if your Switch is vulnerable
+### 기기가 fusee-gelee를 사용할 수 있는지 확인하기
 
-The homebrew community has crowdsourced a list of known serial numbers which are vulnerable to fusee-gelee. 
+홈브류 커뮤니티들에서 fusee-gelee를 사용할 수 있다고 알려진 시리얼 번호들의 리스트를 제공합니다. 
 
-- If your serial number is on this list as "potentially patched", follow the guide and see if your system works. 
-- If your serial number is listed as "patched", there is nothing you can do at this time. 
-- If your system is patched, it is highly advised to keep it on 7.0.1 or lower, if possible, as there may be a vulnerability for these versions in the far future. **DO NOT update patched consoles past 7.0.1 if you want to ever have a chance of running homebrew and/or CFW on them.**
+- 만약 시리얼 번호가 "potentially patched"라면, 가이드를 진행하여 fusee-gelee를 사용할 수 있는지 확인합니다. 
+- 만약 시리얼 번호가 "patched"라면 다른 취약점을 사용하거나 모드칩을 설치해야 합니다. 
+- XK*, XJ*로 시작하는 시리얼 번호는 Mariko 기기로, 커스텀 펌웨어를 사용하기 위해서는 모드칩이 항상 필요합니다.
 
 !!! tip "Notice"
-    If you are unsure if your serial is patched, you can test your console yourself following the instructions [here.](emummc/sending_payload.md)
-
+    만약 패치된 것인지 잘 모르겠다면, [이 방법](emummc/sending_payload.md)을 통해 직접 확인해볼 수 있습니다.
 -----
 
 &nbsp;
 
-### Serial list
+### 시리얼 목록
 
-The following information is based on [this GBATemp thread](https://gbatemp.net/threads/switch-informations-by-serial-number-read-the-first-post-before-asking-questions.481215/).
+다음 목록은 [GBATemp 스레드](https://gbatemp.net/threads/switch-informations-by-serial-number-read-the-first-post-before-asking-questions.481215/)를 바탕으로 작성되었습니다.
 
 |  Serial Numbers  | <span style="color:green">Unpatched</span> | <span style="color:orange">Potentially patched</span> | <span style="color:red">Patched</span> |
 | :----|:---------------------------------|:---------------------------------|:----------------------|
@@ -54,35 +53,28 @@ The following information is based on [this GBATemp thread](https://gbatemp.net/
 &nbsp;
 
 
-### Console Preparation
+### 준비
 
-!!! danger "Important"
-    Before setting up the console for homebrew, it is important to have at least one eShop game (such as [Onigiri](https://www.nintendo.com/games/detail/onigiri-switch/)), application (such as [YouTube](https://www.nintendo.com/games/detail/youtube-switch/) or [Hulu](https://www.nintendo.com/games/detail/hulu-switch/)), or a game demo such as [10 Second Run RETURNS](https://www.nintendo.com/games/detail/10-second-run-returns-switch). Running homebrew through any game cartridge will also work, but it must be inserted. Running homebrew does not permanently replace or remove the game/application, nor does it become tied to only one game/application (any cartridge you have inserted or any game/application installed can always be used). Once you have any game or application, you are prepared to continue on with the guide.
+!!! danger "주의"
+    가이드를 진행하기 전에 스위치에 적어도 하나의 eShop 게임 또는 데모가 있는 것이 좋습니다. ([Onigiri](https://www.nintendo.com/games/detail/onigiri-switch/), [YouTube](https://www.nintendo.com/games/detail/youtube-switch/), [Hulu](https://www.nintendo.com/games/detail/hulu-switch/)), [10 Second Run RETURNS](https://www.nintendo.com/games/detail/10-second-run-returns-switch) 등). 설치된 타이틀 대신 게임카드를 사용해도 됩니다.
 
 &nbsp;
 
 -----
 
-### Version Table
+### 버전 목록
 
-!!! note "Note"
-    Nereba and Caffeine how-to guides are currently a Work-In-Progress (WIP)!
-
-!!! note "Note"
-    While the "New" Switch (HAC-001-01)'s earliest possible firmware is 7.0.1, it is **not** vulnerable to *déjà vu*, the exploit used by Nereba and Caffeine, because of hardware differences from the "Old" Switch (HAC-001).
 
 &nbsp;
 
-| Firmware Version | Unpatched Switches (HAC-001) | Patched Switches (HAC-001) | "New" Switch (HAC-001-01)   | Switch Lite (HDH-001)  | 
-|:---------------|:--------------------------------|:---------------------------|:----------------------------|:-----------------------|
-| 1.0.0          | Nereba or [**RCM**](rcm.md)     | **N/A**                    | **N/A**                     | **N/A**                |
-| 2.0.0 - 3.0.2  | Caffeine or [**RCM**](rcm.md)   | **N/A**                    | **N/A**                     | **N/A**                |
-| 4.0.0 - 4.1.0  | Caffeine or [**RCM**](rcm.md)   | Caffeine                   | **N/A**                     | **N/A**                |
-| 5.0.0 - 7.0.0  | [**RCM**](rcm.md)               | Wait for CFW               | **N/A**                     | **N/A**                |
-| 7.0.1          | [**RCM**](rcm.md)               | Wait for CFW               | Cart update to 8.0.1        | **N/A**                |
-| 8.0.1          | [**RCM**](rcm.md)               | Wait for homebrew          | Wait for homebrew           | Wait for homebrew      |
-| 8.1.0 - 12.0.1 | [**RCM**](rcm.md)               | Unhackable (currently)     | Unhackable (currently)      | Unhackable (currently) |
+| Firmware Version | Unpatched Switches (HAC-001)    | Patched Switches (HAC-001) | "New" Switch (HAC-001-01)   | Switch Lite (HDH-001)  | 
+|:-----------------|:--------------------------------|:---------------------------|:----------------------------|:-----------------------|
+| 1.0.0            | Nereba 또는  [**RCM**](rcm.md)  | **N/A**                    | **N/A**                     | **N/A**                |
+| 2.0.0 - 3.0.2    | Caffeine 또는 [**RCM**](rcm.md) | **N/A**                    | **N/A**                     | **N/A**                |
+| 4.0.0 - 4.1.0    | Caffeine 또는 [**RCM**](rcm.md) | Caffeine 또는 SX Core      | **N/A**                     | **N/A**                |
+| 5.0.0 - 12.0.1   | [**RCM**](rcm.md)               | SX Core                    | SX Core                     | SX Lite                |
 
 &nbsp;
 
-#### [If your Switch is not patched, continue to RCM <i class="fa fa-arrow-circle-right fa-lg"></i>](rcm.md)
+#### [스위치가 패치되지 않았다면, RCM으로 진행하세요. <i class="fa fa-arrow-circle-right fa-lg"></i>](rcm.md)
+
