@@ -1,4 +1,6 @@
-# Switch Guide
+# 한국어 스위치 해킹 가이드
+
+[가이드](https://hacks-korean.github.io/switch-guide)
 
 [Original Guide](https://nh-server.github.io/switch-guide)
 
