@@ -24,9 +24,9 @@ fusee-gelee는 여러 스위치 해킹팀에 의해 발견된 취약점이며 20
 
 - 만약 시리얼 번호가 "potentially patched"라면, 가이드를 진행하여 fusee-gelee를 사용할 수 있는지 확인합니다. 
 - 만약 시리얼 번호가 "patched"라면 다른 취약점을 사용하거나 모드칩을 설치해야 합니다. 
-- XK*, XJ*로 시작하는 시리얼 번호는 Mariko 기기로, 커스텀 펌웨어를 사용하기 위해서는 모드칩이 항상 필요합니다.
+- XK, XJ로 시작하는 시리얼 번호는 Mariko 기기로, 커스텀 펌웨어를 사용하기 위해서는 모드칩이 항상 필요합니다.
 
-!!! tip "Notice"
+!!! tip "안내"
     만약 패치된 것인지 잘 모르겠다면, [이 방법](emummc/sending_payload.md)을 통해 직접 확인해볼 수 있습니다.
 -----
 
@@ -56,7 +56,7 @@ fusee-gelee는 여러 스위치 해킹팀에 의해 발견된 취약점이며 20
 ### 준비
 
 !!! danger "주의"
-    가이드를 진행하기 전에 스위치에 적어도 하나의 eShop 게임 또는 데모가 있는 것이 좋습니다. ([Onigiri](https://www.nintendo.com/games/detail/onigiri-switch/), [YouTube](https://www.nintendo.com/games/detail/youtube-switch/), [Hulu](https://www.nintendo.com/games/detail/hulu-switch/)), [10 Second Run RETURNS](https://www.nintendo.com/games/detail/10-second-run-returns-switch) 등). 설치된 타이틀 대신 게임카드를 사용해도 됩니다.
+    가이드를 진행하기 전에 스위치에 적어도 하나의 eShop 게임 또는 데모가 있는 것이 좋습니다. ([Onigiri](https://www.nintendo.com/games/detail/onigiri-switch/), [YouTube](https://www.nintendo.com/games/detail/youtube-switch/), [Hulu](https://www.nintendo.com/games/detail/hulu-switch/), [10 Second Run RETURNS](https://www.nintendo.com/games/detail/10-second-run-returns-switch) 등). 설치된 타이틀 대신 게임카드를 사용해도 됩니다.
 
 &nbsp;
 
