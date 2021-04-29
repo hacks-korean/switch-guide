@@ -10,6 +10,7 @@ nav:
         - '시작하기': 'user_guide/getting_started.md'
         - 'RCM': 'user_guide/rcm.md'  
         - 'RCM 진입': 'user_guide/emummc/entering_rcm.md'
+        - '모드칩': 'user_guide/modchip.md'
         - '페이로드 주입': 'user_guide/emummc/sending_payload.md'      
         - 'SD 파티션 나누기': 'user_guide/emummc/partitioning_sd.md'    
         - 'SD 준비': 'user_guide/emummc/sd_preparation.md'
