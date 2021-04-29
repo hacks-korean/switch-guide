@@ -1,24 +1,20 @@
-<a href="https://discord.gg/C29hYvh" target="_blank"><img style="float: right;" src="img/discord.png"></a>
-
 # NH Switch Guide
 
-A guide collaboration between Nintendo Homebrew's Helpers and Staff, from stock to Atmosphere.
+순정에서 Atmosphere까지, 스위치 커스텀 펌웨어 가이드
 
 &nbsp;
 
-!!! tip "Discord Help"
-    For live support with this guide please visit us in **#switch-assistance** over at the [Nintendo Homebrew Discord](https://discord.gg/C29hYvh).
 
-### What is homebrew?
+### 홈브류(homebrew)란 무엇인가요?
 
 !!! tip ""
-    Homebrew is a term for unoffical software written by hobbyists and amateur developers for locked down systems (i.e. the Switch).
+    홈브류는 아마추어 개발자들이 만든 잠긴 시스템에서 구동되는 비공식 소프트웨어를 의미합니다.
 
-    This can include save editing tools, games, emulators, and more.
+    세이브 에딧 툴, 홈브류 게임, 에뮬레이터 등이 포함됩니다.
 
-    Homebrew can be run for free on your Switch through Custom Firmware as long as you have a "first-generation" system running 12.0.1 or lower, and a USB-C cable.
+    스위치에서는 12.0.1 이하의 펌웨어에서 커스텀 펌웨어를 통해 홈브류를 구동할 수 있습니다.
 
-### What is Custom Firmware?
+### 커스텀 펌웨어(Custom Firmware)란 무엇인가요?
 
 !!! tip ""
     Custom Firmware (“CFW”) is a piece software that modifies the system firmware.
