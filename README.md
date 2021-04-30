@@ -6,7 +6,7 @@
 
 [Original Repository](https://github.com/nh-server/switch-guide)
 
-Nintendo Switch homebrew guide orininally written by staff members of the Nintendo Homebrew Discord server.
+Nintendo Switch homebrew guide originally written by staff members of the Nintendo Homebrew Discord server.
 
 ## Credits
 
